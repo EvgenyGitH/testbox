@@ -130,7 +130,6 @@ public class UserServiceImpl implements UserService {
         List<Mobile> mobiles = mobileRepository.findAllByUserId(userId);
         List<Email> emails = emailRepository.findAllByUserId(userId);
         Double userAmout = checkAmount(userId);
-
         return UserMapper.toDto(user, mobiles, emails, userAmout);
     }
 
